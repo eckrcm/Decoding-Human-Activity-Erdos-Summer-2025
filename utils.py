@@ -1,29 +1,5 @@
 """
-
-
 To import copy paste below:
-
-import os
-import sys
-
-# Function to Traverse up until you find the project root
-def get_project_root(target="Decoding-Human-Activity-Erdos-Summer-2025"): # replace target name with the name of the root directory/repository name
-    path = os.getcwd()
-    while os.path.basename(path) != target:
-        new_path = os.path.dirname(path)
-        if new_path == path:
-            raise FileNotFoundError(f"Could not find project root '{target}'.")
-        path = new_path
-    return path
-
-
-project_root = get_project_root()
-directory_path = os.path.join(project_root, "Python Files") 
-
-# Add to Python path
-if directory_path not in sys.path:
-    sys.path.append(directory_path)
-
 from utils import *  # * import all or specific functions
 """
 
