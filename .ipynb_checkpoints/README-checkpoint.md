@@ -1,1 +1,0 @@
-# Decoding-Human-Activity-Erdos-Summer-2025
