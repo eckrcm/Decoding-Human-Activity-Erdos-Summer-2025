@@ -26,7 +26,7 @@ This repository contains all materials and code for our project on Human Activit
 
 
 
-## 📂 Dataset
+## Dataset
 
 We use the [UCI HAR dataset](https://archive.ics.uci.edu/ml/datasets/human+activity+recognition+using+smartphones), originally published by Anguita et al. (2013). It includes:
 
