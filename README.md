@@ -32,8 +32,6 @@ We use the [UCI HAR dataset](https://archive.ics.uci.edu/ml/datasets/human+activ
 
 - 30 subjects performing 6 daily activities
 - 561 engineered features extracted from raw smartphone sensor data
-- Device: smartphone with tri-axial accelerometer and gyroscope worn at the waist
-
 
 **Activities:**
 
@@ -51,7 +49,7 @@ We use the [UCI HAR dataset](https://archive.ics.uci.edu/ml/datasets/human+activ
 </p>
 
 ## Classical ML Benchmarks
-Before presenting our main method, we first reproduced the SVM results reported by [Anguita et al. (2013)](https://www.esann.org/sites/default/files/proceedings/legacy/es2013-84.pdf), and then tested four additional standard classifiers on the original 561-feature space:
+Before presenting our main method, we first reproduced the SVM result reported by [Anguita et al. (2013)](https://www.esann.org/sites/default/files/proceedings/legacy/es2013-84.pdf), and then tested four additional standard classifiers on the original 561-feature space:
 
 | Model               | Setup Summary                    | Accuracy |
 |--------------------|----------------------------------|----------|
@@ -91,7 +89,7 @@ We ranked features by importance scores computed via Random Forests. By retainin
 
 ###  Principal Component Analysis (PCA)
 
-PCA was used to embed the data into a lower-dimensional space. We found that **more than 75 principal components** were needed to maintain over **95% accuracy**.
+PCA was used to embed the data into a lower-dimensional space. We found that **more than 50 principal components** were needed to maintain over **95% accuracy**.
 
 - Accuracy vs. # Principal Components  
   ![PCA Accuracy](Figures/pca_line_graph.png)
@@ -103,7 +101,7 @@ PCA was used to embed the data into a lower-dimensional space. We found that **m
 
 ###  Linear Discriminant Analysis (LDA)
 
-This method was the most effective. LDA learns directions that maximize separation between activity classes. Using just **5 LDA components**, we achieved classification accuracy just below **98%**.
+This method was the most effective. Using just **5 LDA components**, we achieved classification accuracy just below **98%**.
 
 - Accuracy vs. # LDA Components  
   ![LDA Line Graph](Figures/lda_line_graph.png)
@@ -123,13 +121,13 @@ This experiment is motivated by the fact that the original dataset assumes a fix
 - **x-axis**: up–down direction  
 - **y-axis**: forward–backward direction  
 - **z-axis**: left–right direction  
-<sub><sup>(to the best of our understanding)</sup></sub>
+
 
 Our model classifies activities based on features extracted under this consistent alignment. But in real-world use, a phone's orientation can easily change. This raises the key question:
 
-> *Will our method still work if the phone is tilted, flipped, or rotated?*
+> *Can our method still classify activities correctly if the phone’s orientation changes?*
 
-To test this, we **randomly permuted the x, y, and z axes** in all features (e.g., means, standard deviations, MADs). For example, swapping x and y simulates turning the phone sideways.
+To test this, we **randomly permuted the x, y, and z axes** in all features (e.g., means, standard deviations). For example, swapping x and y simulates turning the phone sideways.
 
 We found that our method remained robust under these simulated orientation shifts, achieving a classification accuracy of **97%**.
 
