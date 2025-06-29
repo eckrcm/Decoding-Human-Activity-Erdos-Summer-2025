@@ -1,11 +1,11 @@
-# Data used in the project
 Data/
 
-# Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
-# Python byte-code caches
 __pycache__/
 
-# macOS metadata
 .DS_Store
+
+.virtual_documents/
+
+.gitignore.save
