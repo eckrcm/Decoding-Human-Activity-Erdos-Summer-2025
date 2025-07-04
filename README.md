@@ -1,6 +1,6 @@
 # Decoding Human Activity — Erdős Institute Summer 2025
 
-This project explores **Human Activity Recognition (HAR)** problem using data obtained from devices such as accelerometers and gyroscopes. Specifically, we aim to decode or classify daily activities—such as walking, standing, and laying—based on these sensor recordings. This project was completed during the Erdős Institute’s Data Science Bootcamp (Summer 2025).
+This project explores **Human Activity Recognition (HAR)** problem using data obtained from devices such as accelerometers and gyroscopes. Specifically, we aim to decode or classify daily activities—such as walking, standing, and laying—based on these sensor recordings. This project was completed during the [Erdős Institute’s Data Science Bootcamp (Summer 2025)](https://www.erdosinstitute.org/).
 
 ##  Repository Guide
 
@@ -13,6 +13,9 @@ This repository contains all materials and code for our project on Human Activit
 
 - **Main notebook.ipynb**  
   Contains the core analysis, including classical ML benchmarks, dimensionality reduction, orientation invariance tests, and evaluation results.
+
+- **cross_validation.ipynb**
+  Further validates findings using 10-fold cross validation + one time validation on the test set.
 
 ###  Figures
 
