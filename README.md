@@ -14,7 +14,7 @@ This repository contains all materials and code for our project on Human Activit
 - **Main notebook.ipynb**  
   Contains the core analysis, including classical ML benchmarks, dimensionality reduction, orientation invariance tests, and evaluation results.
 
-- **cross_validation.ipynb**
+- **cross_validation.ipynb**  
   Further validates findings using 10-fold cross validation + one time validation on the test set.
 
 ###  Figures
@@ -65,7 +65,7 @@ Before presenting our main method, we first reproduced the SVM result reported b
 
 ## Method Description
 
-We use a simple 1-Nearest Neighbor (1-NN) classifier with Euclidean distance to classify activity samples. For validation, we adopt Leave-One-Out cross-validation (LOO-CV), and in some cases examine the resulting confusion matrices.
+We use 1-Nearest Neighbor (1-NN) classifier with Euclidean distance to classify activity samples. For validation, we adopt Leave-One-Out cross-validation (LOO-CV), and in some cases examine the resulting confusion matrices.
 
 
 ## Findings
